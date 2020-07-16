@@ -9,28 +9,17 @@ import { of } from 'rxjs';
   styleUrls: ['./map.component.css']
 })
 export class MapComponent implements OnInit {
+  result;
+  resultTimeout;
   constructor() {
-    
-// let nums = of(1, 2, 3);
-// // console.log(`nums is ${typeof(nums)}`);
-
-
-// const squareValues = map((val: number) => val * val);
-// // console.log(typeof(squareValues));
-
-// const squaredNums = squareValues(nums);
-// // console.log(typeof(squaredNums));
-
-
-// squaredNums.subscribe(x => console.log(typeof(x),x));
-// ***************************************************************************
+ 
 let nums2 = of(1, 2, 3).pipe(
   map((val: number) => val * val)
 )
-nums2.subscribe(x => console.log(typeof(x),x));
+nums2.subscribe(x => this.result = x);
 
-nums2.subscribe(x => setTimeout(() =>{
-  console.log(x)
+nums2.subscribe(y => setTimeout(() =>{
+  this.resultTimeout = y
 },2000)) 
 
 
