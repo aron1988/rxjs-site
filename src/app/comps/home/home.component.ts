@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 arr = ["from","ajax","from-event","interval","map","pip"]
+randomColor = 'green'
+getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
   constructor() { }
 
   ngOnInit(): void {

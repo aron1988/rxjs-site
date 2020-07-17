@@ -2,9 +2,10 @@
 <!-- <h1><button routerLink='home'>Home</button></h1> -->
 
 <div style="text-align: center" >
-    <div *ngFor="let i of arr" style="background-color: aqua;width: 400px;height: 200px;
+    <div *ngFor="let i of arr" style="width: 400px;height: 200px;
+    font-size: 5em;
      margin: 5px;border: solid steelblue 1px;
      display: inline-block;box-shadow: 5px 5px 13px 0px rgba(0,0,0,0.10);"
-     routerLink="{{i}}">{{i}}</div>
+     routerLink="{{i}}"[style.background-color]="randomColor">{{i}}</div>
 </div>
 <router-outlet></router-outlet>

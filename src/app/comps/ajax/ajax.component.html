@@ -1,4 +1,22 @@
-<p>ajax works!</p>
+<div style="text-align: center">
 
-<h1>{{status}}</h1>
-<h1 *ngFor="let i of respons">{{i.first_name}}</h1>
+<div style="background-color: blueviolet;">
+
+<!-- <div > -->
+    <h1>{{status}}</h1>
+    <ul>
+        <li *ngFor="let i of respons">{{i.first_name}}</li>
+    </ul>
+
+<!-- </div> -->
+
+<div >
+    <button routerLink="AjaxCodComponent" type="button" class="btn btn-secondary btn-lg">Large button</button>
+
+</div>
+
+
+
+</div>
+<router-outlet></router-outlet>
+</div>
